@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<div class="container-fluid mt-4">
+  <h1 style="color: #5F9AD6;">Administración de proveedores</h1>
+  <div class="card " >
+    <div class="card-body " >
+      <div class="row">
+          <div class="col-md-12 mb-4" style="text-align: right;">
+            <button type="button" class="btn btn-primary">Agregar</button>
+          </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Razón Social</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let op of proveedores">
+            <td>{{op.nombre}}</td>
+            <td>{{op.razonSocial}}</td>
+            <td>{{op.direccion}}</td>
+            <td><i class="bi bi-file-word"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
